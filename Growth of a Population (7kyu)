@@ -1,0 +1,11 @@
+function nbYear(p0, percent, aug, p) {
+    let n = 0
+    percent = percent / 100
+    while (p0 <= p) {
+        p0 = p0 + (p0 * percent) + aug
+        p0 = Math.ceil(p0)
+        n++
+        console.log(p0)
+    }
+    return n
+}
