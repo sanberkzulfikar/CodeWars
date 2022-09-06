@@ -1,5 +1,0 @@
-function twiceAsOld(dadYearsOld, sonYearsOld) {
-    let ageDiff = dadYearsOld - sonYearsOld
-    let result = Math.abs(sonYearsOld - ageDiff)
-    return result
-}
