@@ -1,0 +1,25 @@
+// Calculate average (8kyu)
+// https://www.codewars.com/kata/57a2013acf1fa5bfc4000921
+
+// Description: 
+
+// Write a function which calculates the average of the numbers in a given list.
+
+// Note: Empty arrays should return 0.
+
+
+// My Solution:
+
+function find_average(array) {
+    if (array.length === 0) {
+        return 0
+    }
+    else {
+        let sum = 0;
+        let howMany = array.length;
+        array.forEach((x, i) => (sum = sum + x));
+        let avg = sum / howMany;
+        return avg;
+
+    }
+}
