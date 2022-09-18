@@ -1,0 +1,23 @@
+// Is it a palindrome? (8kyu)
+// https://www.codewars.com/kata/57a1fd2ce298a731b20006a4
+
+// Description: 
+
+// Write a function that checks if a given string (case insensitive) is a palindrome.
+
+
+// My Solution:
+
+function isPalindrome(x) {
+  x = x.toLowerCase()
+  let x_Original = x
+  x = x.split('')
+  x = x.reverse()
+  x = x.join('')
+  if (x_Original === x) {
+    return true
+  }
+  else {
+    return false
+  }
+}
