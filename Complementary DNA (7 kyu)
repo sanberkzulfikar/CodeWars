@@ -16,6 +16,8 @@
 // "ATTGC" --> "TAACG"
 // "GTAT" --> "CATA"
 
+// My Solution:
+
 
 function DNAStrand(dna) {
     let newStr = []
