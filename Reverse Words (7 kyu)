@@ -1,0 +1,24 @@
+// Reverse Words (7 kyu)
+// https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/
+
+// Description:
+
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+
+// My Solution:
+
+
+function reverseWords(str) {
+    str = str.split(' ')
+    for (let i = 0; i <= str.length - 1; i++) {
+        str[i] = str[i].split('').reverse()
+        str[i] = str[i].join('')
+    }
+    str = str.join(' ')
+    return str
+}
