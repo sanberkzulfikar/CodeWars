@@ -29,5 +29,4 @@ function findOdd(A) {
             return A[i]
         }
     }
-    return count
 }
