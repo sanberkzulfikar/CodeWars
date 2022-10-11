@@ -13,6 +13,18 @@
 
 // My Solution:
 
-function createPhoneNumber(numbers) {
-    return numbers.join('').replace(/^(\d{3})(\d{3})(\d{4})$/g, '($1) $2-$3')
+// (without regex)
+
+function createPhoneNumber(numbers){
+  let format = "(xxx) xxx-xxxx"
+  for(let i=0; i<numbers.length;i++){
+    format = format.replace("x", numbers[i])
+  }
+  return format
 }
+
+// (with regex)
+
+// function createPhoneNumber(numbers) {
+//     return numbers.join('').replace(/^(\d{3})(\d{3})(\d{4})$/g, '($1) $2-$3')
+// }
