@@ -1,0 +1,25 @@
+// Remove anchor from URL (7 kyu)
+// https://www.codewars.com/kata/529eef7a9194e0cbc1000255/
+
+// Description:
+
+// Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+// Examples
+// "www.codewars.com#about" --> "www.codewars.com"
+// "www.codewars.com?page=1" -->"www.codewars.com?page=1"
+
+
+// My Solution:
+
+function removeUrlAnchor(url) {
+    if (url.indexOf("#") !== -1) {
+        let hashIndex = url.indexOf("#")
+        let length = url.length
+        let remove = (length - hashIndex)
+        url = url.split('')
+        url.splice(hashIndex, remove)
+        url = url.join('')
+    }
+    return url
+}
