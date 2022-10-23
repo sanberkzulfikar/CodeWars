@@ -1,0 +1,22 @@
+// Find the capitals (7 kyu)
+// https://www.codewars.com/kata/539ee3b6757843632d00026b/
+
+// Description:
+
+// Instructions
+// Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
+
+// Example
+// Test.assertSimilar( capitals('CodEWaRs'), [0,3,4,6] );
+
+// My Solution:
+
+var capitals = function (word) {
+    let newArr = []
+    for (let i = 0; i <= word.length - 1; i++) {
+        if (word[i] === word[i].toUpperCase()) {
+            newArr.push(i)
+        }
+    }
+    return newArr
+};
