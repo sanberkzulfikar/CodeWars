@@ -1,0 +1,44 @@
+// Simple Pig Latin (5 kyu)
+// https://www.codewars.com/kata/520b9d2ad5c005041100000f/
+
+// Description:
+
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+// Examples
+// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+// pigIt('Hello world !');     // elloHay orldway !
+
+
+// My Solution:
+
+
+function pigIt(str) {
+    let orgStr = str
+    let finArr = []
+    let tempArr = []
+    let tempCh = ''
+    str = str.split(' ')
+    while (str.length !== 0 && str[0] !== '!' && str[0] !== '?') {
+        tempArr = str.shift()
+        tempArr = tempArr.split('')
+        tempCh = tempArr.shift()
+        tempArr.push(tempCh)
+        tempArr = tempArr.join('')
+        finArr.push(tempArr)
+        finArr = finArr.join('')
+        finArr = finArr + "ay "
+        finArr = finArr.split('')
+        tempArr = []
+    }
+    if (orgStr[orgStr.length - 1] === '!') {
+        return finArr.join('') + '!'
+    }
+    else if (orgStr[orgStr.length - 1] === '?') {
+        return finArr.join('') + '?'
+    }
+    else {
+        finArr.pop()
+        return finArr.join('')
+    }
+}
