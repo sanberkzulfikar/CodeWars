@@ -1,0 +1,21 @@
+// No oddities here (7 kyu)
+// https://www.codewars.com/kata/51fd6bc82bc150b28e0000ce/
+
+// Description:
+
+// Write a small function that returns the values of an array that are not odd.
+
+// All values in the array will be integers. Return the good values in the order they are given.
+
+
+// My Solution:
+
+function noOdds(values) {
+    let newArr = []
+    for (let i = 0; i <= values.length - 1; i++) {
+        if (values[i] % 2 === 0) {
+            newArr.push(values[i])
+        }
+    }
+    return newArr
+}
