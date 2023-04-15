@@ -1,0 +1,23 @@
+// Factorial (7 kyu)
+// https://www.codewars.com/kata/57a049e253ba33ac5e000212/
+
+// Description:
+
+// Your task is to write function factorial.
+
+// https://en.wikipedia.org/wiki/Factorial
+
+// My Solution:
+
+function factorial(n){
+    if(n === 0 || n === 1){
+        return 1
+    } 
+    let result = n * (n-1)
+    n-=2
+    while(n>1){
+        result = result * n
+        n--
+    }
+    return result
+}
