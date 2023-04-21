@@ -1,0 +1,17 @@
+// Capitalization and Mutability (8 kyu)
+// https://www.codewars.com/kata/595970246c9b8fa0a8000086/
+
+// Description:
+
+// Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+
+// My Solution:
+
+function capitalizeWord(word) {
+  let result = [];
+  result.push(word[0].toUpperCase());
+  for (let i = 1; i <= word.length - 1; i++) {
+    result.push(word[i]);
+  }
+  return result.join("");
+}
