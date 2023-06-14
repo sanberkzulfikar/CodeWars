@@ -1,0 +1,27 @@
+// Break camelCase (6 kyu)
+// https://www.codewars.com/kata/58f5c63f1e26ecda7e000029/
+
+// Description:
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+// My Solution:
+
+// complete the function
+function solution(string) {
+  let target = [];
+  for (let i = 0; i <= string.length - 1; i++) {
+    if (string[i].toUpperCase() === string[i]) {
+      target.push(" ");
+      target.push(string[i]);
+    } else {
+      target.push(string[i]);
+    }
+  }
+  return target.join("");
+}
