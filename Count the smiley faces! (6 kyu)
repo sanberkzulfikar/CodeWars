@@ -24,8 +24,6 @@
 
 // My Solution:
 
-// complete the function
-//return the total number of smiling faces in the array
 function countSmileys(arr) {
   let counter = 0;
   for (let j = 0; j <= arr.length - 1; j++) {
