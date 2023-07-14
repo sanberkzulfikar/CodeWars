@@ -1,0 +1,29 @@
+// Remove duplicate words (7 kyu)
+// https://www.codewars.com/kata/5b39e3772ae7545f650000fc/
+
+// Description:
+
+// Your task is to remove all duplicate words from a string, leaving only single (first) words entries.
+
+// Example:
+
+// Input:
+
+// 'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+
+// Output:
+
+// 'alpha beta gamma delta'
+
+// My Solution:
+
+function removeDuplicateWords(s) {
+  let arr = [];
+  s = s.split(" ");
+  for (let i = 0; i <= s.length - 1; i++) {
+    if (arr.includes(s[i]) === false) {
+      arr.push(s[i]);
+    }
+  }
+  return arr.join(" ");
+}
