@@ -1,0 +1,25 @@
+// Digits explosion (7 kyu)
+// https://www.codewars.com/kata/585b1fafe08bae9988000314/
+
+// Description:
+
+// Given a string made of digits [0-9], return a string where each digit is repeated a number of times equals to its value.
+
+// Examples
+// "312" should return "333122"
+// "102269" should return "12222666666999999999"
+
+// My Solution:
+
+function explode(s) {
+  let temp = s;
+  let target = [];
+  temp = temp.split("");
+  temp = temp.map((i) => Number(i));
+  for (let i = 0; i <= temp.length - 1; i++) {
+    for (let j = 1; j <= temp[i]; j++) {
+      target.push(temp[i]);
+    }
+  }
+  return target.join("");
+}
